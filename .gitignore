@@ -1,2 +1,4 @@
 bin
 test
+.sconsign.dblite
+.gitignore
