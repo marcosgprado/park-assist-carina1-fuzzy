@@ -1,0 +1,71 @@
+[System]
+Name='Untitled'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=25
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='position-Y'
+Range=[-30 30]
+NumMFs=5
+MF1='LC':'trapmf',[0 7.5 7.5 15]
+MF2='CE':'trapmf',[-1 0 0 1]
+MF3='RC':'trapmf',[-15 -7.5 -7.5 0]
+MF4='LF':'trapmf',[10 20 30 30]
+MF5='RI':'trapmf',[-30 -30 -20 -10]
+
+[Input2]
+Name='Orientation'
+Range=[-3.14 3.15]
+NumMFs=5
+MF1='RB':'trapmf',[-3.14 -3.14 -1 -0.75]
+MF2='LH':'trapmf',[0 0.5 0.5 1]
+MF3='LB':'trapmf',[0.75 1 3.15 3.15]
+MF4='RH':'trapmf',[-1 -0.5 -0.5 0]
+MF5='VE':'trapmf',[-0.2 0 0 0.2]
+
+[Output1]
+Name='Steering'
+Range=[-30 30]
+NumMFs=7
+MF1='NB':'trapmf',[-30 -30 -30 -15]
+MF2='PS':'trapmf',[0 5.833 5.833 11.67]
+MF3='PB':'trapmf',[15 30 30 30]
+MF4='NM':'trapmf',[-29.17 -17.5 -17.5 -5.833]
+MF5='NS':'trapmf',[-11.67 -5.833 -5.833 0]
+MF6='PM':'trapmf',[5 15 15 25]
+MF7='ZE':'trapmf',[-5.833 0 0 5.833]
+
+[Rules]
+4 1, 1 (1) : 1
+4 4, 6 (1) : 1
+4 5, 6 (1) : 1
+4 2, 6 (1) : 1
+4 3, 3 (1) : 1
+1 1, 1 (1) : 1
+1 4, 6 (1) : 1
+1 5, 2 (1) : 1
+1 2, 6 (1) : 1
+1 3, 3 (1) : 1
+2 1, 1 (1) : 1
+2 4, 1 (1) : 1
+2 5, 7 (1) : 1
+2 2, 3 (1) : 1
+2 3, 3 (1) : 1
+3 1, 1 (1) : 1
+3 4, 4 (1) : 1
+3 5, 5 (1) : 1
+3 2, 4 (1) : 1
+3 3, 3 (1) : 1
+5 1, 3 (1) : 1
+5 4, 4 (1) : 1
+5 5, 4 (1) : 1
+5 2, 4 (1) : 1
+5 3, 3 (1) : 1

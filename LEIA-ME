@@ -1,0 +1,12 @@
+
+compilar:
+	g++ fis.cpp main.cpp -o main
+	
+executar:
+	./main fis_in invkinec1.fis
+
+o arquivo invkinec1.fis é a descrição do sistema: variáveis, regras, ...
+
+o arquivo fis_in contém as entradas para o teste do sistema
+
+no fuzzy user guide tem maiores informações sobre como utilizar :)

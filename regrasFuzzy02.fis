@@ -1,0 +1,83 @@
+[System]
+Name='Untitled'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=35
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Position'
+Range=[-30 30]
+NumMFs=5
+MF1='Right':'trapmf',[-30 -30 -20 -10]
+MF2='RightCerter':'trapmf',[-15 -7.5 -7.5 0]
+MF3='Center':'trapmf',[-2 0 0 2]
+MF4='LeftCenter':'trapmf',[0 7.5 7.5 15]
+MF5='Left':'trapmf',[10 20 30 30]
+
+[Input2]
+Name='Angle'
+Range=[-3.15 3.15]
+NumMFs=7
+MF1='LeftBelow':'trapmf',[1.5 2 3.15 3.15]
+MF2='LeftHorizont':'trapmf',[1 1.5 1.5 2]
+MF3='LeftVertical':'trapmf',[0 0.75 0.75 1.5]
+MF4='Vertical':'trapmf',[-0.2 0 0 0.2]
+MF5='RightVertical':'trapmf',[-1.5 -0.75 -0.75 0]
+MF6='RightHorizont':'trapmf',[-2 -1.5 -1.5 -1]
+MF7='RightBelow':'trapmf',[-3.15 -3.15 -2 -1.5]
+
+[Output1]
+Name='Esterção'
+Range=[-30 30]
+NumMFs=7
+MF1='AngNegBig':'trapmf',[-30 -30 -25 -15]
+MF2='AngNegMedium':'trapmf',[-25 -15 -15 -5]
+MF3='AngNegSmall':'trapmf',[-10 -5 -5 0]
+MF4='AngZero':'trapmf',[-5 0 0 5]
+MF5='AngPosSmall':'trapmf',[0 5 5 10]
+MF6='AngPosMedium':'trapmf',[5 15 15 25]
+MF7='AngPosBig':'trapmf',[15 25 30 30]
+
+[Rules]
+1 1, 7 (1) : 1
+1 2, 4 (1) : 1
+1 3, 1 (1) : 1
+1 4, 1 (1) : 1
+1 5, 1 (1) : 1
+1 6, 1 (1) : 1
+1 7, 7 (1) : 1
+2 1, 7 (1) : 1
+2 2, 7 (1) : 1
+2 3, 2 (1) : 1
+2 4, 3 (1) : 1
+2 5, 1 (1) : 1
+2 6, 1 (1) : 1
+2 7, 1 (1) : 1
+3 1, 7 (1) : 1
+3 2, 7 (1) : 1
+3 3, 7 (1) : 1
+3 4, 4 (1) : 1
+3 5, 1 (1) : 1
+3 6, 1 (1) : 1
+3 7, 1 (1) : 1
+4 1, 7 (1) : 1
+4 2, 7 (1) : 1
+4 3, 7 (1) : 1
+4 4, 5 (1) : 1
+4 5, 6 (1) : 1
+4 6, 1 (1) : 1
+4 7, 1 (1) : 1
+5 1, 1 (1) : 1
+5 2, 7 (1) : 1
+5 3, 7 (1) : 1
+5 4, 7 (1) : 1
+5 5, 7 (1) : 1
+5 6, 2 (1) : 1
+5 7, 1 (1) : 1
